@@ -11,7 +11,7 @@ ENV pojdteven_jwt_expiresIn=30d
 ENV pojdteven_default_bank_account=CZ9520100000002400407618
 ENV pojdteven_default_variable_symbol=12345
 ENV pojdteven_email_user=pojdteven.itpodpora@gmail.com
-ENV pojdteven_email_sendGrid_api_key=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
+# ENV pojdteven_email_sendGrid_api_key=<sendGridApiKey>
 ENV pojdteven_FE_domain=http://localhost:5173
 ENV pojdteven_BE_domain=http://localhost:3000
 
