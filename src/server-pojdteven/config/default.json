@@ -1,0 +1,23 @@
+{
+  "db": {
+    "port": "",
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": ""
+  },
+  "jwt": {
+    "secret": "",
+    "expiresIn": ""
+  },
+  "payment": {
+    "defaultAccount": "",
+    "defaultVariableSymbol": ""
+  },
+  "email": {
+    "user": "",
+    "sendGrid_api_key": ""
+  },
+  "frontendDomain": "",
+  "backendDomain": ""
+}

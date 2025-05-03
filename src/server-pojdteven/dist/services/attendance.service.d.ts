@@ -1,0 +1,41 @@
+import { Attendance, User } from '../models';
+import { AttendanceRepository, ChildRepository, UserRepository } from '../repositories';
+import { EmailService } from './email.service';
+export declare class AttendanceService {
+    private attendanceRepo;
+    private childRepo;
+    private userRepo;
+    private emailService;
+    constructor(attendanceRepo: AttendanceRepository, childRepo: ChildRepository, userRepo: UserRepository, emailService: EmailService);
+    createAttendance(attendance: Omit<Attendance, 'id'>): Promise<Attendance>;
+    deleteAttendance(id: string): Promise<void>;
+    deleteAllAttendanceItemsOlderThanYear(): Promise<void>;
+    getAttendance(id: string): Promise<Attendance>;
+    findAttendance(userId: string, dateStr: string): Promise<Attendance | null>;
+    getAllAttendanceItems(): Promise<Attendance[]>;
+    getAllAttendanceItemsOnDate(date: string): Promise<Attendance[]>;
+    validateAttendance(attendance: Omit<Attendance, 'id'>): Promise<void>;
+    attendanceAlreadyExisted(attendance: Omit<Attendance, 'id'>): Promise<boolean>;
+    validateDateString(date: string): void;
+    createManyChildAttendanceItemsBySchoolDays(childId: string, from: string, to: string): Promise<Attendance[]>;
+    deleteAllAttendanceItemsOfChild(childId: string): Promise<void>;
+    deleteAllAttendanceItemsOfChildFromToday(childId: string): Promise<void>;
+    getAllNormalAttendanceItemsOfChildInMonth(childId: string, month: number): Promise<Attendance[]>;
+    getCountOfAllAlternativeAttendanceOfChild(childId: string): Promise<number>;
+    enrollNewNormalAttendanceOfChild(att: Omit<Attendance, 'id'>): Promise<Attendance>;
+    unrollAttendanceOfChild(id: string): Promise<void>;
+    getAllAlternativeAttendanceItemsOfChild(childId: string): Promise<Attendance[]>;
+    getAllNormalAttendanceItemsOfChild(childId: string): Promise<Attendance[]>;
+    deleteAttendanceItemsOlderThanTwoMonths(attendanceItems: Attendance[]): Promise<Attendance[]>;
+    createAttendanceItemsOfUser(userId: string, dates: string[]): Promise<Attendance[]>;
+    deleteAllAttendanceItemsOfUser(userId: string): Promise<void>;
+    getAllAttendanceItemsOfAllTeachersInMonth(month: number): Promise<Attendance[]>;
+    changeTeacherAttendance(data: {
+        originTeacherId: string;
+        nextTeacherId: string;
+        isPickUp: boolean;
+        dateStr: string;
+    }): Promise<Attendance>;
+    getSignedUserOnDate(date: string): Promise<User[]>;
+    validateTeacher(userId: string): Promise<void>;
+}

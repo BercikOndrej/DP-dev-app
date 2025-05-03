@@ -1,0 +1,23 @@
+{
+  "db": {
+    "port": "pojdteven_port",
+    "host": "pojdteven_host",
+    "user": "pojdteven_user",
+    "password": "pojdteven_password",
+    "database": "pojdteven_database"
+  },
+  "jwt": {
+    "secret": "pojdteven_jwt_secret",
+    "expiresIn": "pojdteven_jwt_expiresIn"
+  },
+  "payment": {
+    "defaultAccount": "pojdteven_default_bank_account",
+    "defaultVariableSymbol": "pojdteven_default_variable_symbol"
+  },
+  "email": {
+    "user": "pojdteven_email_user",
+    "sendGrid_api_key": "pojdteven_email_sendGrid_api_key"
+  },
+  "frontendDomain": "pojdteven_FE_domain",
+  "backendDomain": "pojdteven_BE_domain"
+}

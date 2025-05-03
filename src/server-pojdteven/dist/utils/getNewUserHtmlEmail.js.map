@@ -1,0 +1,1 @@
+{"version":3,"file":"getNewUserHtmlEmail.js","sourceRoot":"","sources":["../../src/utils/getNewUserHtmlEmail.ts"],"names":[],"mappings":";;;AAAA,4DAA4B;AAE5B,SAAS,mBAAmB,CAAC,KAAa,EAAE,QAAgB;IAC1D,MAAM,QAAQ,GAAG,gBAAM,CAAC,GAAG,CAAC,eAAe,CAAW,CAAC;IACvD,OAAO;;;;;;;;;;;;;kBAaS,QAAQ;;;;;;;;;;;;;;;;oEAgB0C,KAAK;oEACL,QAAQ;;;;;;;;;;;;;;QAcpE,CAAC;AACT,CAAC;AAED,kBAAe,mBAAmB,CAAC"}
